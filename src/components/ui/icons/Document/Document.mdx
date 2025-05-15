@@ -1,0 +1,38 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Document from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as DocumentStories from './Document.stories.tsx';
+
+<Meta of={DocumentStories} />
+
+# Document Icon
+
+The Document component creates a document icon using inline SVG. Typically, you can use it to represent an attachment file.
+
+## Importing
+
+```javascript
+import { Document } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Document width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Document width="2rem" height="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Document} />

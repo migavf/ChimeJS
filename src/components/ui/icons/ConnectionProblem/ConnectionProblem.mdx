@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import ConnectionProblem from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as ConnectionProblemStories from './ConnectionProblem.stories.tsx';
+
+<Meta of={ConnectionProblemStories} />
+
+# ConnectionProblem Icon
+
+The ConnectionProblem component creates an icon using inline SVG. Typically, you can use it to indicate problems with video connection.
+
+## Importing
+
+```javascript
+import { ConnectionProblem } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <ConnectionProblem width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<ConnectionProblem width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={ConnectionProblem} />

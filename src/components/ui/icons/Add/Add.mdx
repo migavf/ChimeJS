@@ -1,0 +1,51 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Add from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as AddStories from './Add.stories.tsx';
+
+<Meta of={AddStories} />
+
+# Add Icon
+
+The Add component creates a plus icon using inline SVG. Typically, you can use it to represent an add action.
+
+## Importing
+
+```javascript
+import { Add } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Add width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Add width="2rem" height="2rem" />
+```
+
+With title on hover
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Add width="2rem" height="2rem" title="Add" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Add width="2rem" height="2rem" title="Add" />
+```
+
+## Props
+
+<ArgTypes of={Add} />

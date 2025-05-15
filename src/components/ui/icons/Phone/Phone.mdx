@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Phone from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as PhoneStories from './Phone.stories.tsx';
+
+<Meta of={PhoneStories} />
+
+# Phone Icon
+
+The Phone component creates a phone handler icon using inline SVG. Typically, you can use it to represent a call action.
+
+## Importing
+
+```javascript
+import { Phone } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Phone width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Phone width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Phone} />

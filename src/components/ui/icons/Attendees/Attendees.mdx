@@ -1,0 +1,38 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Attendees from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as AttendeesStories from './Attendees.stories.tsx';
+
+<Meta of={AttendeesStories} />
+
+# Attendees Icon
+
+The Attendees component creates an icon using inline SVG. Typically, you can use it to represent meeting Attendees.
+
+## Importing
+
+```javascript
+import { Attendees } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Attendees width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Attendees width="2rem" height="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Attendees} />

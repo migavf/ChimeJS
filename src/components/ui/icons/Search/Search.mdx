@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Search from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as SearchStories from './Search.stories.tsx';
+
+<Meta of={SearchStories} />
+
+# Search Icon
+
+The Search component creates an amplifier icon using inline SVG. Typically, you can use it to represent a search action.
+
+## Importing
+
+```javascript
+import { Search } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Search width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Search width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Search} />

@@ -1,0 +1,46 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Textarea from './';
+import { lightTheme } from '../../../theme/';
+import { GlobalStyles } from '../../../theme/GlobalStyles';
+import * as TextareaStories from './Textarea.stories.tsx';
+
+<Meta of={TextareaStories} />
+
+# Textarea
+
+The Textarea component defines a multi-line text input control.
+
+## Importing
+
+```javascript
+import { Textarea } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Textarea
+      placeholder="text goes here"
+      label="my test label"
+      value="some sample text"
+      onChange={() => {}}
+    />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Textarea
+  placeholder="textarea placeholder"
+  label="my test label"
+  value="some sample text"
+  onChange={() => {}}
+/>
+```
+
+## Props
+
+<ArgTypes of={Textarea} />

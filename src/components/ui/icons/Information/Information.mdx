@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Information from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as InformationStories from './Information.stories.tsx';
+
+<Meta of={InformationStories} />
+
+# Information Icon
+
+The Information component creates an exclamation icon using inline SVG. Typically, you can use it to show hint or informational text.
+
+## Importing
+
+```javascript
+import { Information } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Information width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Information width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Information} />

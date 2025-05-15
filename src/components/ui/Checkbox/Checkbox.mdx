@@ -1,0 +1,37 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+import * as CheckboxStories from './Checkbox.stories.tsx';
+import Checkbox from './';
+import { lightTheme } from '../../../theme/';
+import { GlobalStyles } from '../../../theme/GlobalStyles';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+The Checkbox component permits you to make a binary choice.
+
+## Importing
+
+```javascript
+import { Checkbox } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Checkbox value="" checked onChange={() => console.log('change')} />
+    <Checkbox value="" checked={false} onChange={() => console.log('change')} />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Checkbox value="" checked onChange={() => console.log('change')} />
+<Checkbox value="" checked={false} onChange={() => console.log('change')} />
+```
+
+## Props
+
+<ArgTypes of={Checkbox} />

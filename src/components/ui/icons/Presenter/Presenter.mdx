@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Presenter from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as PresenterStories from './Presenter.stories.tsx';
+
+<Meta of={PresenterStories} />
+
+# Presenter Icon
+
+The Presenter component creates an icon using inline SVG. Typically, you can use it to represent a presenter role.
+
+## Importing
+
+```javascript
+import { Presenter } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Presenter width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Presenter width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Presenter} />

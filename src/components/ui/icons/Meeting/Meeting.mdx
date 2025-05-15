@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Meeting from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as MeetingStories from './Meeting.stories.tsx';
+
+<Meta of={MeetingStories} />
+
+# Meeting Icon
+
+The Meeting component creates a table icon using inline SVG. Typically, you can use it to show settings or options of a meeting.
+
+## Importing
+
+```javascript
+import { Meeting } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Meeting width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Meeting width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Meeting} />

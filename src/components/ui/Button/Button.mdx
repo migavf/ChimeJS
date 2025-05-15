@@ -1,0 +1,90 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+import * as ButtonStories from './Button.stories.tsx';
+import { lightTheme } from '../../../theme/';
+import { GlobalStyles } from '../../../theme/GlobalStyles';
+
+import Button from './';
+import PrimaryButton from './PrimaryButton';
+import SecondaryButton from './SecondaryButton';
+import IconButton from './IconButton';
+import Meeting from '../icons/Meeting';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+The Button component displays a HTML button.
+
+## Importing
+
+```javascript
+import {
+  Button,
+  PrimaryButton,
+  SecondaryButton,
+  IconButton,
+} from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+### Standard Button
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Button label="Basic button" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Button label="Basic button" />
+```
+
+### PrimaryButton
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <PrimaryButton label="Primary" />
+    <PrimaryButton label="Primary" icon={<Meeting />} />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<PrimaryButton label='Primary' />
+<PrimaryButton label='Primary' icon={<Meeting />} />
+```
+
+### SecondaryButton
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <SecondaryButton label="This is a secondary button" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<SecondaryButton label="This is a secondary button" />
+```
+
+### IconButton
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <IconButton icon={<Meeting />} />
+    <IconButton selected icon={<Meeting />} />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<IconButton icon={<Meeting />} />
+<IconButton selected icon={<Meeting />} />
+```
+
+## Props
+
+<ArgTypes of={Button} />

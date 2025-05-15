@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Record from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as RecordStories from './Record.stories.tsx';
+
+<Meta of={RecordStories} />
+
+# Record Icon
+
+The Record component creates an icon with `REC` using inline SVG. Typically, you can use it to represent a record action.
+
+## Importing
+
+```javascript
+import { Record } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Record width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Record width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Record} />

@@ -1,0 +1,50 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Pin from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as PinStories from './Pin.stories.tsx';
+
+<Meta of={PinStories} />
+
+# Pin Icon
+
+The Pin component creates a pin icon using inline SVG. Typically, you can use it to dock and undock a Roster or Chat display.
+
+## Importing
+
+```javascript
+import { Pin } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Pin width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Pin width="2rem" height="2rem" />
+```
+
+Unpin icon
+
+<ThemeProvider theme={lightTheme}>
+  <Canvas>
+    <Pin width="2rem" height="2rem" unpin title="Unpin" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Pin width="2rem" height="2rem" unpin title="Unpin" />
+```
+
+## Props
+
+<ArgTypes of={Pin} />

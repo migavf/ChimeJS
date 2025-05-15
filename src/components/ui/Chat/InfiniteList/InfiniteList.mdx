@@ -1,0 +1,51 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Flex from '../../Flex';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import InfiniteList from './';
+import { BasicInfiniteList } from './InfiniteList.stories.tsx';
+import * as InfiniteListStories from './InfiniteList.stories.tsx';
+
+<Meta of={InfiniteListStories} />
+
+# InfiniteList
+
+The InfiniteList component populates a list with elements. The list then handles loading more elements when the user scrolls to the top.
+The InfiniteList initially scrolls the newest (bottom) item into view upon load. It also ensures the most recent new items is loaded into the top of the visible list and scrolling is disabled while loading the new batch.
+
+## Importing
+
+```javascript
+import { InfiniteList } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<Canvas>
+  <ThemeProvider theme={lightTheme}>
+    <GlobalStyles />
+    <Flex layout="fill-space-centered">
+      <BasicInfiniteList />
+    </Flex>
+  </ThemeProvider>
+</Canvas>
+
+```jsx
+<InfiniteList
+  items={[<span>1</span>, ...]}
+  handleLoad={fetchItems}
+  batchSize={50}
+/>
+
+<InfiniteList
+  items={items}
+  handleLoad={fetchItems}
+  batchSize={50}
+/>
+```
+
+## Props
+
+<ArgTypes of={InfiniteList} />

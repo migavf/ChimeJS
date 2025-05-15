@@ -1,0 +1,52 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Camera from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+
+import * as CameraStories from './Camera.stories.tsx';
+
+<Meta of={CameraStories} />
+
+# Camera Icon
+
+The Camera component creates a camera icon using inline SVG. Typically, you can use it to indicate the status of attendee's video input.
+
+## Importing
+
+```javascript
+import { Camera } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width, height and title
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Camera width="2rem" height="2rem" title="Camera on" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Camera width="2rem" height="2rem" title="Camera on" />
+```
+
+Disabled camera icon
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Camera width="2rem" height="2rem" disabled title="Camera off" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Camera width="2rem" height="2rem" disabled title="Camera off" />
+```
+
+## Props
+
+<ArgTypes of={Camera} />

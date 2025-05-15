@@ -1,0 +1,50 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Sound from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as SoundStories from './Sound.stories.tsx';
+
+<Meta of={SoundStories} />
+
+# Sound Icon
+
+The Sound component creates a speaker icon using inline SVG. Typically, you can use it to indicate volume or status of attendee's audio output.
+
+## Importing
+
+```javascript
+import { Sound } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Sound width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Sound width="2rem" height="2rem" />
+```
+
+Disabled sound icon
+
+<ThemeProvider theme={lightTheme}>
+  <Canvas>
+    <Sound width="2rem" height="2rem" disabled title="Sound off" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Sound width="2rem" height="2rem" disabled title="Sound off" />
+```
+
+## Props
+
+<ArgTypes of={Sound} />

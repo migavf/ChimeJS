@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import CheckRound from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as CheckRoundStories from './CheckRound.stories.tsx';
+
+<Meta of={CheckRoundStories} />
+
+# CheckRound Icon
+
+The CheckRound component creates a checkmark within circle using inline SVG.
+
+## Importing
+
+```javascript
+import { CheckRound } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <CheckRound width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<CheckRound width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={CheckRound} />

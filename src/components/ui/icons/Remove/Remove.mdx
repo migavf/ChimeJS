@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Remove from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as RemoveStories from './Remove.stories.tsx';
+
+<Meta of={RemoveStories} />
+
+# Remove Icon
+
+The Remove component creates an icon with `X` using inline SVG. Typically, you can use it to represent a remove or close action.
+
+## Importing
+
+```javascript
+import { Remove } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Remove width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Remove width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Remove} />

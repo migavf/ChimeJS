@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Rooms from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as RoomsStories from './Rooms.stories.tsx';
+
+<Meta of={RoomsStories} />
+
+# Rooms Icon
+
+The Rooms component creates an icon of messages using inline SVG. Typically, you can use it to indicate a chat room or a chat group.
+
+## Importing
+
+```javascript
+import { Rooms } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Rooms width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Rooms width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Rooms} />

@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import ZoomOut from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as ZoomOutStories from './ZoomOut.stories.tsx';
+
+<Meta of={ZoomOutStories} />
+
+# ZoomOut Icon
+
+The ZoomOut component creates an icon. Typically, you can use it to represent a zoom out action.
+
+## Importing
+
+```javascript
+import { ZoomOut } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <ZoomOut width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<ZoomOut width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={ZoomOut} />

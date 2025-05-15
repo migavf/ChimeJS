@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Dislike from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as DislikeStories from './Dislike.stories.tsx';
+
+<Meta of={DislikeStories} />
+
+# Dislike Icon
+
+The Dislike component creates an icon using inline SVG. Typically, you can use it to indicate a dislike action.
+
+## Importing
+
+```javascript
+import { Dislike } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Dislike width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Dislike width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Dislike} />

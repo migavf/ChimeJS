@@ -1,0 +1,38 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import EmojiPicker from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as EmojiPickerStories from './EmojiPicker.stories.tsx';
+
+<Meta of={EmojiPickerStories} />
+
+# EmojiPicker Icon
+
+The EmojiPicker component creates a clip icon using inline SVG. Typically, you can use it to represent an emoji picker action.
+
+## Importing
+
+```javascript
+import { EmojiPicker } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <EmojiPicker width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<EmojiPicker width="2rem" height="2rem" />
+```
+
+## Props
+
+<ArgTypes of={EmojiPicker} />

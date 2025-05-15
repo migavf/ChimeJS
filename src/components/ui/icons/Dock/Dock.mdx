@@ -1,0 +1,50 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Dock from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as DockStories from './Dock.stories.tsx';
+
+<Meta of={DockStories} />
+
+# Dock Icon
+
+The Dock component creates a dock icon using inline SVG. Typically, you can use it to dock and undock a Roster or Chat display.
+
+## Importing
+
+```javascript
+import { Dock } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Dock width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Dock width="2rem" height="2rem" />
+```
+
+Undock icon
+
+<ThemeProvider theme={lightTheme}>
+  <Canvas>
+    <Dock width="2rem" height="2rem" undock title="Undock" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Dock width="2rem" height="2rem" undock title="Undock" />
+```
+
+## Props
+
+<ArgTypes of={Dock} />

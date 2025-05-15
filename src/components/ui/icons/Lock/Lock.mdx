@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Lock from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as LockStories from './Lock.stories.tsx';
+
+<Meta of={LockStories} />
+
+# Lock Icon
+
+The Lock component creates an icon using inline SVG. Typically, you can combine it with Information icon to indicate a locked meeting.
+
+## Importing
+
+```javascript
+import { Lock } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Lock width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Lock width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Lock} />

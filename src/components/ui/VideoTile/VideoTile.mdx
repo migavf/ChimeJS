@@ -1,0 +1,40 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import VideoTile from '.';
+import { lightTheme } from '../../../theme/';
+import { GlobalStyles } from '../../../theme/GlobalStyles';
+import * as VideoTileStories from './VideoTile.stories.tsx';
+
+<Meta of={VideoTileStories} />
+
+# VideoTile
+
+You can use VideoTile component to render local or remote video content.
+
+## Importing
+
+```javascript
+import { VideoTile } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <div style={{ height: '15rem', width: '25rem', margin: '2rem auto' }}>
+      <VideoTile nameplate="Test name" />
+    </div>
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<VideoTile nameplate="Test name" />
+```
+
+## Props
+
+#### VideoTile component
+
+<ArgTypes of={VideoTile} />

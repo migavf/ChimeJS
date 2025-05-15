@@ -1,0 +1,50 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import DeskPhone from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as DeskPhoneStories from './DeskPhone.stories.tsx';
+
+<Meta of={DeskPhoneStories} />
+
+# DeskPhone Icon
+
+The DeskPhone component creates a phone icon using inline SVG. Typically, you can use it in a meeting roster to indicate status of attendees who join the meeting via phone.
+
+## Importing
+
+```javascript
+import { DeskPhone } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <DeskPhone width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<DeskPhone width="2rem" />
+```
+
+Disabled DeskPhone icon
+
+<ThemeProvider theme={lightTheme}>
+  <Canvas>
+    <DeskPhone width="2rem" disabled />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<DeskPhone width="2rem" disabled />
+```
+
+## Props
+
+<ArgTypes of={DeskPhone} />

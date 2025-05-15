@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Crown from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as CrownStories from './Crown.stories.tsx';
+
+<Meta of={CrownStories} />
+
+# Crown Icon
+
+The Crown component creates a crown icon using inline SVG.
+
+## Importing
+
+```javascript
+import { Crown } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Crown width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Crown width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Crown} />

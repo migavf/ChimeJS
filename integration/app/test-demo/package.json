@@ -1,0 +1,36 @@
+{
+  "name": "test-demo",
+  "version": "0.1.0",
+  "dependencies": {
+    "amazon-chime-sdk-component-library-react": "file:../../..",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.15",
+    "styled-system": "^5.1.5",
+    "stylis": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.4",
+    "@types/react-router-dom": "^5.3.0",
+    "aws-sdk": "^2.1354.0",
+    "compression": "^1.7.4",
+    "concurrently": "^6.4.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react-router-dom": "^6.0.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "uuid": "^8.3.2",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "preinstall": "cd ../../.. && npm install && npm run build",
+    "start:client": "webpack-dev-server",
+    "start:backend": "node server.js",
+    "start:fast": "concurrently \"npm run start:client\" \"npm run start:backend\"",
+    "start": "npm install && npm run start:fast"
+  }
+}

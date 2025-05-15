@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import ScreenShare from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as ScreenShareStories from './ScreenShare.stories.tsx';
+
+<Meta of={ScreenShareStories} />
+
+# ScreenShare Icon
+
+The ScreenShare component creates a display icon using inline SVG. Typically, you can use it to represent a screen share action.
+
+## Importing
+
+```javascript
+import { ScreenShare } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <ScreenShare width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<ScreenShare width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={ScreenShare} />

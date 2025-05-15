@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Caution from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as CautionStories from './Caution.stories.tsx';
+
+<Meta of={CautionStories} />
+
+# Caution Icon
+
+The Caution component creates a caution icon using inline SVG. Typically, you can use it to indicate a warning.
+
+## Importing
+
+```javascript
+import { Caution } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Caution width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Caution width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Caution} />

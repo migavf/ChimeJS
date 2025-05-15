@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Clock from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as ClockStories from './Clock.stories.tsx';
+
+<Meta of={ClockStories} />
+
+# Clock Icon
+
+The Clock component creates a clock icon using inline SVG.
+
+## Importing
+
+```javascript
+import { Clock } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Clock width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Clock width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Clock} />

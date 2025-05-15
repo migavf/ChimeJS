@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Laptop from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as LaptopStories from './Laptop.stories.tsx';
+
+<Meta of={LaptopStories} />
+
+# Laptop Icon
+
+The Laptop component creates a laptop icon using inline SVG. Typically, you can use it in a meeting roster to indicate status of attendees who join the meeting via a laptop.
+
+## Importing
+
+```javascript
+import { Laptop } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Laptop width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Laptop width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Laptop} />

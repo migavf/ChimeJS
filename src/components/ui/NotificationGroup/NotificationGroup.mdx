@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/blocks';
+import * as NotificationGroupStories from './NotificationGroup.stories.tsx';
+
+<Meta of={NotificationGroupStories} />
+
+# NotificationGroup
+
+The NotificationGroup component renders any current notifications to the top of the screen.
+
+Check `NotificationProvider` [documentation](/docs/ui-providers-notificationprovider--page) for more information.
+
+## Importing
+
+```javascript
+import { NotificationGroup } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+```jsx
+<NotificationProvider>
+  <NotificationGroup />
+</NotificationProvider>
+```
+
+Note: Check for working under the `Canvas` section for this component.
+
+## Dependencies
+
+- `NotificationProvider`

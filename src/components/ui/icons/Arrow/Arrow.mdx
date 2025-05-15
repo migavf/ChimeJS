@@ -1,0 +1,51 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Arrow from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as ArrowStories from './Arrow.stories.tsx';
+
+<Meta of={ArrowStories} />
+
+# Arrow Icon
+
+The Arrow component creates an arrow icon using inline SVG. You can define the direction of the arrow, e.g. up, right, down, and left.
+
+## Importing
+
+```javascript
+import { Arrow } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+With custom width and height
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Arrow width="2rem" height="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Arrow width="2rem" height="2rem" />
+```
+
+Change the direction
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Arrow width="2rem" height="2rem" direction="right" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Arrow width="2rem" height="2rem" direction="right" />
+```
+
+## Props
+
+<ArgTypes of={Arrow} />

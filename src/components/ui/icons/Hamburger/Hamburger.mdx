@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Hamburger from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as HamburgerStories from './Hamburger.stories.tsx';
+
+<Meta of={HamburgerStories} />
+
+# Hamburger Icon
+
+The Hamburger component creates an icon with three strips using inline SVG. Typically, you can use it for a menu.
+
+## Importing
+
+```javascript
+import { Hamburger } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Hamburger width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Hamburger width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Hamburger} />

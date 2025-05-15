@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Play from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as PlayStories from './Play.stories.tsx';
+
+<Meta of={PlayStories} />
+
+# Play Icon
+
+The Play component creates a play icon using inline SVG. Typically, you can use it to represent a play or resume action.
+
+## Importing
+
+```javascript
+import { Play } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Play width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Play width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Play} />

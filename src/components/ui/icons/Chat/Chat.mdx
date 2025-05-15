@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Chat from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as ChatStories from './Chat.stories.tsx';
+
+<Meta of={ChatStories} />
+
+# Chat Icon
+
+The Chat component creates a message icon using inline SVG. Typically, you can use it to represent a chat message.
+
+## Importing
+
+```javascript
+import { Chat } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles/>
+  <Canvas>
+    <Chat width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Chat width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Chat} />

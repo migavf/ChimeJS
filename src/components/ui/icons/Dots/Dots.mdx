@@ -1,0 +1,36 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import { ThemeProvider } from 'styled-components';
+
+import Dots from './';
+import { lightTheme } from '../../../../theme/';
+import { GlobalStyles } from '../../../../theme/GlobalStyles';
+import * as DotsStories from './Dots.stories.tsx';
+
+<Meta of={DotsStories} />
+
+# Dots Icon
+
+The Dots component creates an icon with three dots using inline SVG. Typically, you can use it to indicate that there are more options.
+
+## Importing
+
+```javascript
+import { Dots } from 'amazon-chime-sdk-component-library-react';
+```
+
+## Example
+
+<ThemeProvider theme={lightTheme}>
+  <GlobalStyles />
+  <Canvas>
+    <Dots width="2rem" />
+  </Canvas>
+</ThemeProvider>
+
+```jsx
+<Dots width="2rem" />
+```
+
+## Props
+
+<ArgTypes of={Dots} />
